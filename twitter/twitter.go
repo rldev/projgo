@@ -37,7 +37,7 @@ func (v *Twitter) Validate(username string) bool{
 	containsNoIllegalPattern(username)
 }
 
-func IsAvailable(username string) (bool, error){
+func (v *Twitter) IsAvailable(username string) (bool, error){
 	resp, err:= http.Get("https://twitter.com/")
 	if err != nil {
 		errReseau := errNetworkFailure{cause:err}

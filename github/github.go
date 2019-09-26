@@ -22,7 +22,7 @@ func (v *Github) validate(username string) bool{
 	containsNoIllegalPattern(username)
 }
 
-func isAvailable(username string) (bool, error){
+func (v *Github) isAvailable(username string) (bool, error){
 	resp, err:= http.Get("https://github.com/")
 	if err != nil {
 		return false,err
