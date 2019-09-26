@@ -1,3 +1,3 @@
-module github.com/rldev/public/projgo
+module github.com/rldev/projgo
 
 go 1.13
